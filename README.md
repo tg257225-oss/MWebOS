@@ -17,3 +17,9 @@ This window displays very minimal information about myself, will probably add mo
 ### Notes
 This window functions almost like the notepad on Windows. You can type whatever you want into the box and it saves with `localStorage` so you can resume typing your note even after closing the page.
 
+## Building Process
+Everything for the web operating system is written in **HTML**, **CSS**, and **JavaScript**. 
+### Window Dragging
+Window dragging utilizes a simple mouse up, mouse move, mouse down pattern (code comes from W3Schools). The header bar of each window acts as the handle for dragging.
+### Storing Data
+Storing inputted data (such as note entries) using `localStorage` for its ease.
