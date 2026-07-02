@@ -23,3 +23,6 @@ Everything for the web operating system is written in **HTML**, **CSS**, and **J
 Window dragging utilizes a simple mouse up, mouse move, mouse down pattern (code comes from W3Schools). The header bar of each window acts as the handle for dragging.
 ### Storing Data
 Storing inputted data (such as note entries) using `localStorage` for its ease.
+
+## Credits
+The background image of my OS comes from Ahmet Yüksek on unsplash (https://unsplash.com/photos/snowy-mountains-under-a-starry-night-sky-1E3gWJFOXms).
