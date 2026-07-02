@@ -1,5 +1,6 @@
 # MWebOS
 MOs is a single-page, operating system that runs entirely in your browser.
+![MOs Banner](webos1.png)
 ## Usage Instructions
 1. Clone this repository
 2. Open `index.html` in a browser.
