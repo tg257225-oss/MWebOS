@@ -10,7 +10,7 @@ This is a simple calculator. It can carry out addition, multiplication, divison,
 There is an AC button (All Clear) which deletes every digit currently in the display and a DE button (Delete) which deletes the last digit inputted.
 
 ### About Me
-This window displays very minimal information about myself, will probably add more to it later. It also has a link to my GitHub Repository so you can check out my other sub-par projects.
+This window displays very minimal information about myself, will probably add more to it later. It also has a link to my GitHub Repository, so you can check out my other sub-par projects.
 
 ### Notes
 This window functions almost like the notepad on Windows. You can type whatever you want into the box and it saves with `localStorage` so you can resume typing your note even after closing the page.
