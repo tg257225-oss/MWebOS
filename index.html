@@ -1,0 +1,136 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <link rel="stylesheet" href="fonts/style.css"> 
+    <link rel="stylesheet" href="buttons.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+</head> 
+<body style="font-family: 'Geist Pixel', sans-serif; background-image: url(./eh.jpg);
+ background-position: top center; background-size: cover; image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges; background-repeat: no-repeat; min-height: 100vh; overflow-x: hidden; overflow-y: hidden;"> 
+    
+
+    <!--top bar-->
+    <div style="display: flex; justify-content: space-between; position: absolute; left: 0; top: 0; width: 100% ;
+     align-items:center; height: 7%; backdrop-filter: blur(10px); background-color: rgba(0, 0, 0, 0.25); color: black;"> 
+        <p class="basic-shadow" style="font-size: 50px; line-height: 1; margin: 0 0 0 20px; cursor: pointer;"> MOs </p> 
+
+        <p class="basic-shadow" id="timeElement" style="font-size: 20px; line-height: 1; margin: 0 20px 0 0;"> Time </p> 
+    </div> 
+
+
+    <!--welcome window-->
+    <div id="welcome" style="display: none; flex-direction: column; border: 4mm ridge rgba(49, 50, 78, 0.6); width: 500px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: rgb(221, 218, 213); padding: 10px;"> 
+    
+    <div id="welcomeheader" style="display: flex; justify-content: space-between; align-items: center; background-color: rgba(49, 50, 78, 0.8); color: white; padding: 5px 10px; cursor: move; user-select: none;">
+            <span style="font-weight: bold; font-size: 18px;">About Me</span>
+            <span id="welcomeclose" style="cursor: pointer; font-weight: bold; font-size: 20px; padding: 0 5px; line-height: .5;">&times;</span> 
+      
+    </div>
+
+    <h1 style="margin: 1px; font-size: 60px; line-height: 1;">Welcome to MOs</h1> 
+    <h2 style="line-height: 0.6;">Introduction</h2> 
+    <p style="line-height:1.2">Hello everyone! My name is Mapplect! I plan to make many more hardware/software projects with HackClub! </p> 
+    <img style="width: 100px; height: 100px;" src="./kibby.jpg" alt="Kibby"> 
+    <p><a href="https://github.com/tg257225-oss">GitHub</a></p> 
+</div> 
+
+
+
+<!--notes-->
+<div class ="container" id="note" style="display: none; flex-direction: column; border: 4mm ridge rgba(25, 28, 87, 0.6); width: 500px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: rgb(221, 218, 213); padding: 10px;"> 
+
+    <div id="noteheader" style="display: flex; justify-content: space-between; align-items: center; background-color: rgba(49, 50, 78, 0.8); color: white; padding: 5px 10px; cursor: move; user-select: none;">
+            <span style="font-weight: bold; font-size: 18px;">Notes</span>
+            <span id="noteclose" style="cursor: pointer; font-weight: bold; font-size: 20px; padding: 0 5px; line-height: .5;">&times;</span> 
+    </div>
+    <div class="notes-container">
+        <p contenteditable="true"  data-placeholder="Type what's on your mind..."></p>
+    </div>
+</div> 
+
+
+<!--calculator-->
+<div id="calc" style="display: none; flex-direction: column; border: 4mm ridge rgba(158, 159, 177, 0.6); width: 500px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: rgb(221, 218, 213); padding: 10px;"> 
+    
+    <div id="calcheader" style="display: flex; justify-content: space-between; align-items: center; background-color: rgba(49, 50, 78, 0.8); color: white; padding: 5px 10px; cursor: move; user-select: none;">
+            <span style="font-weight: bold; font-size: 18px;">Calculator</span>
+            <span id="calcclose" style="cursor: pointer; font-weight: bold; font-size: 20px; padding: 0 5px; line-height: .5;">&times;</span> 
+      
+    </div>
+
+  <div class="calccontainer">
+    <div class="calculator">
+        <form>
+            <div class="display">
+                <input type="text" name="display" readonly>
+            </div>
+            <div>
+                <input type="button" value="AC" onclick="display.value = ''">
+                <input type="button" value="DE" onclick="display.value = display.value.toString().slice(0,-1)">
+                <input type="button" value="." onclick="display.value += '.'">
+                <input type="button" value="/" onclick="display.value += '/'">
+            </div>
+            <div>
+                <input type="button" value="7" onclick="display.value += '7'">
+                <input type="button" value="8" onclick="display.value += '8'">
+                <input type="button" value="9" onclick="display.value += '9'">
+                <input type="button" value="*" onclick="display.value += '*'">
+            </div>
+            <div>
+                <input type="button" value="4" onclick="display.value += '4'">
+                <input type="button" value="5" onclick="display.value += '5'">
+                <input type="button" value="6" onclick="display.value += '6'">
+                <input type="button" value="-" onclick="display.value += '-'">
+            </div>
+            <div>
+                <input type="button" value="1" onclick="display.value += '1'">
+                <input type="button" value="2" onclick="display.value += '2'">
+                <input type="button" value="3" onclick="display.value += '3'">
+                <input type="button" value="+" onclick="display.value += '+'">
+            </div>
+            <div>
+                <input type="button" value="00" onclick="display.value += '00'">
+                <input type="button" value="0" onclick="display.value += '0'">
+                <input class="equal" type="button" value="=" onclick="display.value = eval(display.value)">
+            </div>
+        </form>
+    </div>
+  </div>
+
+</div> 
+
+
+<!--taskbar-->
+<div style="position: fixed; bottom: 0; left: 0; width: 100%; height: 50px;
+ background-color: rgba(49, 50, 78, 0.9); display: flex; align-items:
+  center; justify-content: center; gap: 6px; padding: 5px 10px; box-sizing: border-box; color: white;">
+  <span>
+  
+  </span>
+
+
+  <!--buttons-->
+  <div class="button-wrapper">
+
+<div class="button-container1">
+<button id="noteopen" class="notebtn"><i class="fa fa-sticky-note-o"></i></button>
+<span class="hover-text">Notes</span>
+</div>
+
+<div class="button-container2">
+<button id="welcomeopen" class="welcomebtn"><i class="fa fa-bars"></i></button>
+<span class="hover-text">About Me</span>
+</div>
+
+<div class="button-container3">
+<button id="calcopen" class="calcbtn"><i class="fa fa-calculator"></i></button>
+<span class="hover-text">Calculator</span>
+</div>
+
+ </div>
+
+</div>
+    <script src="script.js"></script>    
+</body> 
+</html>

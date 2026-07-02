@@ -1,0 +1,124 @@
+.notebtn, .welcomebtn, .calcbtn { 
+    background-color: rgb(104, 137, 170); 
+    border: none; 
+    color: white; 
+    width: 40px; 
+    height: 40px; 
+    padding: 2; 
+    border-radius: 8px; 
+    font-size: 24px; 
+    cursor: pointer; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.35s ease;
+} 
+
+.notebtn:hover, .welcomebtn:hover, .calcbtn:hover { 
+    background-color: rgb(144, 144, 221); 
+    
+}
+.button-container1, .button-contain2, .button-container3 {
+    position: relative;
+    display: inline-block;
+    align-items: center;
+   
+}
+.hover-text {
+    display: none;
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+.button-container1:hover .hover-text, .button-container2:hover .hover-text, .button-container3:hover .hover-text {
+    display: block;
+    background-color: rgba(49, 50, 78, 0.9);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+.notebtn.active, .welcomebtn.active, .calcbtn.active {
+    background-color: rgb(144, 144, 221);
+    transition: background-color 0.35s ease;
+}
+
+
+
+
+
+.basic-shadow {
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+   -webkit-text-stroke: 1.5px rgb(0, 0, 0);
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: clamp(8%, 9%, 9%);
+}
+
+
+.calccontainer {
+    width:100%;
+    height:60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+      
+}
+
+.calculator {
+    background: rgba(49, 50, 78, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    justify-content: center;
+    height: 50vh;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+  
+}
+
+
+.calculator form input {
+
+ border: 5;
+ outline: 3;
+ width: 80px;
+ height: clamp(52px, 7vh, 80px);
+
+ border-radius: 10px;
+ box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1),5px 5px 15px rgba(0, 0, 0, 0.2);
+ background: white;
+ margin: 3px;
+ font-size: 20px;
+ font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+form .display {
+    display: flex;
+    justify-content: right;
+    margin: 15px 0;
+}
+
+form .display input {
+    text-align: right;
+    flex: 1;
+    font-size: 45px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    box-shadow: none;
+}
+
+
+form input.equal {
+    width:171px;
+}
+
+
+
+

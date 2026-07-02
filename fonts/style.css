@@ -1,0 +1,60 @@
+@font-face {
+    font-family: "Geist Pixel";
+    src: url('../fonts/GeistPixel-Regular-VariableFont_ELSH.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+
+}
+.red-x {
+    position: relative;
+   
+}
+
+
+.red-x::before, .red-x::after {
+    content: '';
+    position: absolute;
+    top: 45%;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    background-color: #ff0000; 
+    border-radius: 30px;
+}
+
+
+.red-x::before {
+    transform: rotate(45deg);
+}
+
+
+.red-x::after {
+    transform: rotate(-45deg); 
+}
+
+
+.container{
+    min-height: 60vh;
+    max-height: 80vh;
+    min-width: 60vh;
+    max-width: 100vh;
+
+}
+
+.notes-container p[contenteditable="true"] {
+    cursor: text;
+}
+
+
+p[contenteditable="true"]:empty::before {
+    content:attr(data-placeholder);
+    color:rgb(163, 175, 175);
+    height:auto;
+    pointer-events: none;
+}
+
+p[contenteditable="true"]:focus {
+    outline: none;
+    border: 2px black;
+}
+
