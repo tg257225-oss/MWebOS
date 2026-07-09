@@ -1,12 +1,22 @@
 
   function updateTime() {
-        var currentTime = new Date().toLocaleString();
+        var currentTime = new Date().toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'});
         var timeText = document.querySelector("#timeElement");
         timeText.innerHTML = currentTime
     
 } 
 setInterval(updateTime, 1000);
 updateTime(); 
+
+function updateDate() {
+        var currentDate = new Date().toLocaleDateString([], {});
+        var timeText = document.querySelector("#dateElement");
+        timeText.innerHTML = currentDate
+    
+} 
+setInterval(updateDate, 1000000);
+updateDate(); 
+
 
 const windowIds = ["welcome", "note", "calc"];
 

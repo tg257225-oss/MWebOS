@@ -102,14 +102,10 @@
 
 
 <!--taskbar-->
-<div style="position: fixed; bottom: 0; left: 0; width: 100%; height: 50px;
+<div class="taskbar" style="position: fixed; bottom: 0; left: 0; width: 100%; height: 50px;
  background-color: rgba(49, 50, 78, 0.9); display: flex; align-items:
-  center; justify-content: center; gap: 6px; padding: 5px 10px; box-sizing: border-box; color: white;">
-  <span>
+  center; padding: 5px 10px; box-sizing: border-box; color: white;">
   
-  </span>
-
-
   <!--buttons-->
   <div class="button-wrapper">
 
@@ -128,7 +124,14 @@
 <span class="hover-text">Calculator</span>
 </div>
 
+<div class="button-container4">
+<button id="calendaropen" class="calendarbtn"><i class="fa fa-calendar"></i></button>
+<span class="hover-text">Calendar</span>
+</div>
+
  </div>
+
+ <p class="basic-shadow" id="dateElement" style="font-size: 20px; line-height: 1; margin: 0 10px 0 auto;"> Date </p>
 
 </div>
     <script src="script.js"></script>    

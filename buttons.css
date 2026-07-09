@@ -1,4 +1,4 @@
-.notebtn, .welcomebtn, .calcbtn { 
+.notebtn, .welcomebtn, .calcbtn, .calendarbtn { 
     background-color: rgb(104, 137, 170); 
     border: none; 
     color: white; 
@@ -14,11 +14,11 @@
     transition: background-color 0.35s ease;
 } 
 
-.notebtn:hover, .welcomebtn:hover, .calcbtn:hover { 
+.notebtn:hover, .welcomebtn:hover, .calcbtn:hover, .calendarbtn:hover { 
     background-color: rgb(144, 144, 221); 
     
 }
-.button-container1, .button-contain2, .button-container3 {
+.button-container1, .button-contain2, .button-container3, .button-container4 {
     position: relative;
     display: inline-block;
     align-items: center;
@@ -32,7 +32,7 @@
     transform: translateX(-50%);
 
 }
-.button-container1:hover .hover-text, .button-container2:hover .hover-text, .button-container3:hover .hover-text {
+.button-container1:hover .hover-text, .button-container2:hover .hover-text, .button-container3:hover .hover-text, .button-container4:hover .hover-text {
     display: block;
     background-color: rgba(49, 50, 78, 0.9);
     color: white;
@@ -40,7 +40,7 @@
     border-radius: 4px;
     white-space: nowrap;
 }
-.notebtn.active, .welcomebtn.active, .calcbtn.active {
+.notebtn.active, .welcomebtn.active, .calcbtn.active, .calendarbtn.active {
     background-color: rgb(144, 144, 221);
     transition: background-color 0.35s ease;
 }
@@ -50,14 +50,23 @@
 
 
 .basic-shadow {
-    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
-   -webkit-text-stroke: 1.5px rgb(0, 0, 0);
+    text-shadow: 3px 0px 5px rgba(0, 0, 0, 0.5);
+   -webkit-text-stroke: 1.5px rgb(84, 92, 116);
+}
+
+.taskbar {
+    justify-content: center;
+    position: relative;
 }
 
 .button-wrapper {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
-    justify-content: space-between;
-    width: clamp(8%, 9%, 9%);
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
 }
 
 
