@@ -18,7 +18,8 @@ setInterval(updateDate, 1000000);
 updateDate(); 
 
 
-const windowIds = ["welcome", "note", "calc"];
+const windowIds = ["welcome", "note", "calc", "calendar"
+];
 
 windowIds.forEach(id => {
 dragElement(document.getElementById(id));
@@ -119,6 +120,11 @@ var calcScreen = document.querySelector("#calc");
 var calcScreenClose = document.querySelector("#calcclose");
 var calcScreenOpen = document.querySelector("#calcopen");
 
+var calendarScreen = document.querySelector("#calendar");
+var calendarScreenClose = document.querySelector("#calendarclose");
+var calendarScreenOpen = document.querySelector("#calendaropen");
+
+
 function setButtonActive(button, isActive) {
   if (button) {
     button.classList.toggle("active", isActive);
@@ -188,6 +194,25 @@ function toggleCalcWindow() {
   }
 }
 
+function closeCalendarWindow() {
+  if (calendarScreen) calendarScreen.style.display = "none";
+  setButtonActive(calendarScreenOpen, false);
+}
+
+function openCalendarWindow() {
+  if (calendarScreen) calendarScreen.style.display = "flex";
+  setButtonActive(calendarScreenOpen, true);
+}
+
+function toggleCalendarWindow() {
+  if (calendarScreen) {
+    if (calendarScreen.style.display === "flex") {
+      closeCalendarWindow();
+    } else {
+      openCalendarWindow();
+    }
+  }
+}
 
 
 
@@ -229,5 +254,18 @@ if (calcScreenClose) {
 if (calcScreenOpen) {
   calcScreenOpen.addEventListener("click", function() {
     toggleCalcWindow();
+  });
+}
+
+
+if (calendarScreenClose) {
+  calendarScreenClose.addEventListener("click", function() {
+    closeCalendarWindow();
+  });
+}
+
+if (calendarScreenOpen) {
+  calendarScreenOpen.addEventListener("click", function() {
+    toggleCalendarWindow();
   });
 }

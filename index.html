@@ -101,9 +101,40 @@
 </div> 
 
 
+
+<!--calendar-->
+<div class ="container" id="calendar" style="display: none; flex-direction: column; border: 4mm ridge rgba(25, 28, 87, 0.6); width: 500px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: rgb(221, 218, 213); padding: 10px;"> 
+
+    <div id="calendarheader" style="display: flex; justify-content: space-between; align-items: center; background-color: rgba(49, 50, 78, 0.8); color: white; padding: 5px 10px; cursor: move; user-select: none;">
+            <span style="font-weight: bold; font-size: 18px;">Calendar</span>
+            <span id="calendarclose" style="cursor: pointer; font-weight: bold; font-size: 20px; padding: 0 5px; line-height: .5;">&times;</span> 
+    </div>
+    <div class="calebuttonheader" style="display: flex; align-items: center; padding:10px; justify-content: space-between;">
+        <button id ="prevBTN"><i class="fa fa-chevron-left"></i></button>
+        <div class="monthYear" id="monthYear"></div>
+        <button id = "nextBtn"><i class="fa fa-chevron-right"></i></button>
+        
+    </div>
+
+    <div class="calecontainer">
+   
+    <div class="days">
+            <div class="day">Mon</div>
+            <div class="day">Tue</div>
+            <div class="day">Wed</div>
+            <div class="day">Thu</div>
+            <div class="day">Fri</div>
+            <div class="day">Sat</div>
+            <div class="day">Sun</div>
+        </div>
+        <div class="dates" id="dates"></div>
+</div> 
+</div>
+
+
 <!--taskbar-->
 <div class="taskbar" style="position: fixed; bottom: 0; left: 0; width: 100%; height: 50px;
- background-color: rgba(49, 50, 78, 0.9); display: flex; align-items:
+ background-color: rgba(49, 50, 78, 2); display: flex; align-items:
   center; padding: 5px 10px; box-sizing: border-box; color: white;">
   
   <!--buttons-->

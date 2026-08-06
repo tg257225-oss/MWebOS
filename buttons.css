@@ -131,3 +131,22 @@ form input.equal {
 
 
 
+.calecontainer {
+    display:column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background: #fff;
+    min-height: 100%;
+    border-radius: 10px;
+    
+}
+
+.calebuttonheader {
+    display: flex;
+    align-items:center;
+    padding:10px;
+    background: #fff;
+    border-radius: 10px;
+   
+}
